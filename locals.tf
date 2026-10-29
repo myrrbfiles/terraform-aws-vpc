@@ -16,7 +16,7 @@ locals {
     igw_final_tags = merge(
         local.common_tags,
         {
-            Name = "${var.project}-${var.environment}-igw
+            Name = "${var.project}-${var.environment}-igw"
         },
         var.igw_tags 
     )
