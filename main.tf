@@ -23,7 +23,7 @@ resource "aws_subnet" "public" {
     tags = merge(
         local.common_tags,
         {
-            Name = "${var.project}-${var.environment}-public-${data.aws_availability_zones.available.names[count.index]}
+            Name = "${var.project}-${var.environment}-public-${data.aws_availability_zones.available.names[count.index]}"
         },
         var.public_subnet_tags
     )
@@ -40,7 +40,7 @@ resource "aws_subnet" "private" {
     tags = merge(
         local.common_tags,
         {
-            Name = "${var.project}-${var.environment}-private-${data.aws_availability_zones.available.names[count.index]}
+            Name = "${var.project}-${var.environment}-private-${data.aws_availability_zones.available.names[count.index]}"
         },
         var.private_subnet_tags
     )
@@ -56,7 +56,7 @@ resource "aws_subnet" "database" {
     tags = merge(
         local.common_tags,
         {
-            Name = "${var.project}-${var.environment}-database-${data.aws_availability_zones.available.names[count.index]}
+            Name = "${var.project}-${var.environment}-database-${data.aws_availability_zones.available.names[count.index]}"
         },
         var.database_subnet_tags
     )
@@ -65,7 +65,7 @@ resource "aws_subnet" "database" {
 resource "aws_route_table" "public" {
     vpc_id = aws_vpc.main.id
 
-    
+
 }
 
 
