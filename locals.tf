@@ -26,7 +26,7 @@ locals {
     public_route_table_final_tags = merge(
         local.common_tags,
         {
-            Name = "${var.project}-${var.environment}-public
+            Name = "${var.project}-${var.environment}-public"
         },
         var.public_route_table_tags
     )
@@ -34,7 +34,7 @@ locals {
     private_route_table_final_tags = merge(
         local.common_tags,
         {
-            Name = "${var.project}-${var.environment}-private
+            Name = "${var.project}-${var.environment}-private"
         },
         var.private_route_table_tags
     )
@@ -42,7 +42,7 @@ locals {
     database_route_table_final_tags = merge(
         local.common_tags,
         {
-            Name = "${var.project}-${var.environment}-database
+            Name = "${var.project}-${var.environment}-database"
         },
         var.database_route_table_tags
     )
@@ -58,7 +58,7 @@ locals {
     nat_gateway_final_tags = merge(
         local.common_tags,
         {
-            Name = "${var.project}-${var.environment}
+            Name = "${var.project}-${var.environment}"
         },
         var.nat_gateway_tags
     )
