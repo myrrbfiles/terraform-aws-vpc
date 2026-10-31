@@ -1,6 +1,6 @@
 resource "aws_vpc_peering_connection" "default" {
   count = var.is_peering_required ? 1 : 0
-  #peer_owner_id = aws_vpc.default.id  # within the same aws account, so commented.
+  #peer_owner_id = aws_vpc.default.id
   peer_vpc_id   = aws_vpc.default.id
   vpc_id        = aws_vpc.main.id
   auto_accept = true
